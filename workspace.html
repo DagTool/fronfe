@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#112b45" />
+    <meta name="description" content="Giao diện mẫu DigiX Lab: thiết kế quy trình và vận hành hồ sơ." />
+    <title>DigiX Lab · Không gian làm việc</title>
+    <link rel="icon" href="./digix-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Điều hướng chính">
+        <a class="brand" href="./index.html" aria-label="Về landing DigiX Lab"><img src="./digix-logo-dark.svg" width="151" height="40" alt="DigiX Lab" /></a>
+        <div class="workspace-tag"><span class="workspace-dot"></span> KHÔNG GIAN LÀM VIỆC</div>
+        <nav class="side-nav" id="side-nav"></nav>
+        <div class="side-bottom">
+          <div class="help-card"><span class="help-icon">?</span><strong>Cần hỗ trợ?</strong><p>Xem hướng dẫn sử dụng và cấu hình quy trình.</p><button type="button" data-action="help">Xem hướng dẫn <span aria-hidden="true">↗</span></button></div>
+          <div class="side-foot">DigiX Lab <span>Giao diện mẫu · 2026</span></div>
+        </div>
+      </aside>
+      <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+      <div class="main-column">
+        <header class="topbar">
+          <div class="top-left"><button class="icon-button mobile-menu" id="menu-button" type="button" aria-label="Mở điều hướng" aria-expanded="false" aria-controls="sidebar"><span class="menu-lines"></span></button><div class="breadcrumb" id="breadcrumb"></div></div>
+          <div class="top-actions">
+            <span class="demo-pill"><span></span> DỮ LIỆU MẪU</span>
+            <label class="tenant-select"><span>Doanh nghiệp</span><select id="tenant-select" aria-label="Chọn doanh nghiệp"><option value="alpha">Công ty An Phát</option><option value="beta">Công ty Minh Tâm</option></select></label>
+            <button class="icon-button notification-button" type="button" data-action="notifications" aria-label="Thông báo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg><i></i></button>
+            <button class="avatar-button" type="button" data-action="profile" aria-label="Tài khoản Nguyễn Minh Anh">MA</button>
+          </div>
+        </header>
+        <main id="main-content" tabindex="-1"></main>
+      </div>
+    </div>
+    <div id="modal-root"></div>
+    <div id="toast-root" role="status" aria-live="polite"></div>
+    <script src="./flow.js" defer></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+
